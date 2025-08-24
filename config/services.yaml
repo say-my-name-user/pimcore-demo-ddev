@@ -229,3 +229,23 @@ services:
         arguments:
             - !service { class: PDO, factory: [ '@database_connection', 'getNativeConnection' ] }
             - { lock_mode: 0 }
+
+    # ---------------------------------------------------------
+    # Doctrine repositories
+    # ---------------------------------------------------------
+    App\Repository\:
+        resource: '../src/Repository'
+        
+    # Make repositories public for direct container access
+    App\Repository\ColorRepository:
+        public: true
+        
+    App\Repository\FilterRepository:
+        public: true
+
+    # ---------------------------------------------------------
+    # Doctrine data fixtures
+    # ---------------------------------------------------------
+    App\DataFixtures\:
+        resource: '../src/DataFixtures'
+        tags: [ 'doctrine.fixture.orm' ]

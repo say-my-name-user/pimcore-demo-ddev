@@ -1,6 +1,7 @@
 <?php
 
 use CustomerManagementFrameworkBundle\PimcoreCustomerManagementFrameworkBundle;
+use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use OutputDataConfigToolkitBundle\OutputDataConfigToolkitBundle;
 use Pimcore\Bundle\DataHubBundle\PimcoreDataHubBundle;
 use Pimcore\Bundle\EcommerceFrameworkBundle\PimcoreEcommerceFrameworkBundle;
@@ -15,6 +16,7 @@ use Pimcore\Bundle\WebToPrintBundle\PimcoreWebToPrintBundle;
 use Pimcore\Bundle\WordExportBundle\PimcoreWordExportBundle;
 use Pimcore\Bundle\XliffBundle\PimcoreXliffBundle;
 use Presta\SitemapBundle\PrestaSitemapBundle;
+use Symfony\Bundle\MakerBundle\MakerBundle;
 use Web2PrintToolsBundle\Web2PrintToolsBundle;
 use Pimcore\Bundle\SimpleBackendSearchBundle\PimcoreSimpleBackendSearchBundle;
 use Pimcore\Bundle\CustomReportsBundle\PimcoreCustomReportsBundle;
@@ -47,4 +49,6 @@ return [
     PimcoreXliffBundle::class => ['all' => true],
     PrestaSitemapBundle::class => ['all' => true],
     PimcoreGenericExecutionEngineBundle::class => ['all' => true],
+    MakerBundle::class => ['all' => true],
+    DoctrineFixturesBundle::class => ['all' => true],
 ];
